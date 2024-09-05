@@ -1,3 +1,4 @@
+import 'package:boxigo_app/services/api_service.dart';
 import 'package:flutter/material.dart';
 
 class LeadsScreen extends StatelessWidget {
@@ -5,6 +6,9 @@ class LeadsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    print(ApiService().getData());
+    return const Scaffold(
+
+    );
   }
 }

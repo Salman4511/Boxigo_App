@@ -13,6 +13,7 @@ class LeadListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      itemCount: estimates.length,
       itemBuilder: (context, index) {
         return LeadCard(estimate: estimates[index]);
       },

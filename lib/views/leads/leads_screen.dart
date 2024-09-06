@@ -1,4 +1,3 @@
-// ignore_for_file: library_private_types_in_public_api
 import 'package:boxigo_app/views/leads/lead_list_screen.dart';
 import 'package:boxigo_app/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -9,11 +8,10 @@ class LeadScreen extends StatefulWidget {
   const LeadScreen({super.key});
 
   @override
-  _LeadScreenState createState() => _LeadScreenState();
+  State<LeadScreen> createState() => _LeadScreenState();
 }
 
-class _LeadScreenState extends State<LeadScreen>
-    with SingleTickerProviderStateMixin {
+class _LeadScreenState extends State<LeadScreen> with SingleTickerProviderStateMixin{
   late TabController _tabController;
 
   @override
@@ -24,10 +22,9 @@ class _LeadScreenState extends State<LeadScreen>
         // ignore: use_build_context_synchronously
         () => Provider.of<LeadController>(context, listen: false).fetchData());
   }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+   return Scaffold(
       appBar: CustomAppBar(
         tabController: _tabController,
         title: 'Leads',

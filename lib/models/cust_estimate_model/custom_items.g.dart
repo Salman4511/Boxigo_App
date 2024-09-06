@@ -9,7 +9,7 @@ part of 'custom_items.dart';
 CustomItems _$CustomItemsFromJson(Map<String, dynamic> json) => CustomItems(
       units: json['units'] as String?,
       items: (json['items'] as List<dynamic>?)
-          ?.map((e) => Item.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => CustItem.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

@@ -1,5 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
 import 'package:boxigo_app/views/leads/lead_list_screen.dart';
+import 'package:boxigo_app/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:boxigo_app/controllers/lead_controller.dart';
@@ -26,51 +27,17 @@ class _LeadScreenState extends State<LeadScreen>
 
   @override
   Widget build(BuildContext context) {
-    final leadController = Provider.of<LeadController>(context);
-
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Leads',
-          style: TextStyle(
-            fontSize: 25,
-          ),
-        ),
-        actions: [
-          IconButton(
-            icon: Badge.count(
-              count: 99,
-              child: const Icon(
-                Icons.notifications_none_outlined,
-                size: 30,
-              ),
-            ),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: const Icon(
-              Icons.search,
-              size: 30,
-            ),
-            onPressed: () {},
-          ),
+      appBar: CustomAppBar(
+        tabController: _tabController,
+        title: 'Leads',
+        tabs: const [
+          Tab(text: 'All'),
+          Tab(text: 'New'),
+          Tab(text: 'Follow Up'),
+          Tab(text: 'Booked'),
+          Tab(text: 'In Transit'),
         ],
-        bottom: TabBar(
-          controller: _tabController,
-          isScrollable: true,
-          indicatorSize: TabBarIndicatorSize.tab,
-          labelStyle:
-              const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-          indicatorColor: Colors.deepOrange,
-          labelColor: Colors.deepOrange,
-          tabs: const [
-            Tab(text: 'All'),
-            Tab(text: 'New'),
-            Tab(text: 'Follow Up'),
-            Tab(text: 'Booked'),
-            Tab(text: 'In Transit'),
-          ],
-        ),
       ),
       body: Consumer<LeadController>(
         builder: (context, leadState, child) {

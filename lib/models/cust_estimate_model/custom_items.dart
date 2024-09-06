@@ -1,13 +1,12 @@
+import 'package:boxigo_app/models/cust_estimate_model/cust_item.dart';
 import 'package:json_annotation/json_annotation.dart';
-
-import 'item.dart';
 
 part 'custom_items.g.dart';
 
 @JsonSerializable()
 class CustomItems {
   String? units;
-  List<Item>? items;
+  List<CustItem>? items;
 
   CustomItems({this.units, this.items});
 

@@ -1,3 +1,4 @@
+import 'package:boxigo_app/views/leads/new_lead_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../models/cust_estimate_model/customer_estimate_flow.dart';
@@ -13,7 +14,6 @@ class LeadCard extends StatelessWidget {
     final DateFormat monthFormatter = DateFormat('MMM');
     final DateFormat dayFormatter = DateFormat('dd');
     final DateFormat timeFormatter = DateFormat('HH:mm');
-
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
@@ -93,7 +93,16 @@ class LeadCard extends StatelessWidget {
                       children: [
                         Expanded(
                           child: OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return NewLeadScreen(
+                                    estimate: estimate.items!,
+                                  );
+                                }),
+                              );
+                            },
                             style: kOutlinedButtonStyle,
                             child: const Text(
                               'View Details',

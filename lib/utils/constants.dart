@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 // Text styles
@@ -61,3 +63,49 @@ const kOutlinedButtonTextStyle = TextStyle(
 const kElevatedButtonTextStyle = TextStyle(
   color: Colors.white,
 );
+
+// constants from LeadDetailsScreen
+
+const kExpansionTileTitleTextStyle = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 20,
+  color: Colors.deepOrange,
+);
+
+const kExpansionTileCollapsedColor = Colors.grey;
+
+const kTileTitleTextStyle = TextStyle(
+  color: Colors.grey,
+);
+
+const kTileSubtitleTextStyle = TextStyle(
+  fontWeight: FontWeight.w900,
+);
+
+const kTileTrailingTextStyle = TextStyle(
+  fontWeight: FontWeight.w900,
+  fontSize: 18,
+);
+
+const kCustomItemTextStyle = TextStyle(
+  fontWeight: FontWeight.w400,
+  fontSize: 18,
+);
+
+const kTileLeadingIcon = Icons.chair;
+
+const kDimensionTextStyle = TextStyle(
+  fontWeight: FontWeight.w900,
+);
+
+// Padding values
+const kPadding15 = EdgeInsets.only(left: 15);
+const kPadding10 = EdgeInsets.symmetric(vertical: 10);
+
+// Heights for ListViews
+const kListViewHeight300 = 300.0;
+const kListViewHeight120 = 120.0;
+
+// SizedBoxes
+
+const kSizedBoxHeight10 = SizedBox(height: 10);

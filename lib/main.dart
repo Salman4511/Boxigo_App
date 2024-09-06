@@ -1,6 +1,5 @@
 import 'package:boxigo_app/controllers/lead_controller.dart';
 import 'package:boxigo_app/views/home/home_screen.dart';
-import 'package:boxigo_app/views/leads/leads_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

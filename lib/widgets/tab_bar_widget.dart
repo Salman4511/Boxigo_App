@@ -1,3 +1,4 @@
+import 'package:boxigo_app/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class TabBarWidget extends StatelessWidget implements PreferredSizeWidget {
@@ -17,8 +18,8 @@ class TabBarWidget extends StatelessWidget implements PreferredSizeWidget {
         isScrollable: true,
         indicatorSize: TabBarIndicatorSize.tab,
         labelStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-        indicatorColor: Colors.deepOrange,
-        labelColor: Colors.deepOrange,
+        indicatorColor: kBaseColor,
+        labelColor: kBaseColor,
         tabs: tabs);
   }
 

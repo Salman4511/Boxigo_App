@@ -5,10 +5,10 @@ import 'package:boxigo_app/widgets/custom_list_tile_widget.dart';
 import 'package:boxigo_app/widgets/dimension_row_widget.dart';
 import 'package:flutter/material.dart';
 
-class LeadDetailsScreen extends StatelessWidget {
-  final Items estimate;
+class LeadItemsScreen extends StatelessWidget {
+  final Items items;
 
-  const LeadDetailsScreen({super.key, required this.estimate});
+  const LeadItemsScreen({super.key, required this.items});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class LeadDetailsScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      estimate.inventory![0].displayName ?? '',
+                      items.inventory![0].displayName ?? '',
                       style: kTileTitleTextStyle.copyWith(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -35,10 +35,9 @@ class LeadDetailsScreen extends StatelessWidget {
               SizedBox(
                 height: kListViewHeight300,
                 child: ListView.builder(
-                  itemCount: estimate.inventory![0].category![0].items!.length,
+                  itemCount: items.inventory![0].category![0].items!.length,
                   itemBuilder: (context, index) {
-                    final item =
-                        estimate.inventory![0].category![0].items![index];
+                    final item = items.inventory![0].category![0].items![index];
                     return CustomListTile(
                       title: item.displayName ?? '',
                       subtitle: 'Small | ${item.typeOptions ?? 'Wooden'}',
@@ -75,9 +74,9 @@ class LeadDetailsScreen extends StatelessWidget {
               SizedBox(
                 height: kListViewHeight120,
                 child: ListView.builder(
-                  itemCount: estimate.customItems!.items!.length,
+                  itemCount: items.customItems!.items!.length,
                   itemBuilder: (context, index) {
-                    final custItem = estimate.customItems!.items![index];
+                    final custItem = items.customItems!.items![index];
                     return ListTile(
                       title: Text(
                         custItem.itemName ?? '',

@@ -1,3 +1,4 @@
+import 'package:boxigo_app/utils/constants.dart';
 import 'package:boxigo_app/widgets/tab_bar_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +29,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           icon: Badge.count(
             count: 99,
-            backgroundColor: Colors.deepOrange,
+            backgroundColor: kBaseColor,
             child: const Icon(
               Icons.notifications_none_outlined,
               size: 30,

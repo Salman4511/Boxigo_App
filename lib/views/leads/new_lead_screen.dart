@@ -1,12 +1,14 @@
+import 'package:boxigo_app/models/cust_estimate_model/customer_estimate_flow.dart';
 import 'package:boxigo_app/models/cust_estimate_model/items.dart';
-import 'package:boxigo_app/views/leads/lead_details_screen.dart';
+import 'package:boxigo_app/views/leads/lead_floor_info_screen.dart';
+import 'package:boxigo_app/views/leads/lead_items_screen.dart';
 import 'package:boxigo_app/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class NewLeadScreen extends StatefulWidget {
-  final Items estimate;
-
-  const NewLeadScreen({super.key, required this.estimate});
+  final Items items;
+  final CustomerEstimateFlow estimate;
+  const NewLeadScreen({super.key, required this.items, required this.estimate});
 
   @override
   State<NewLeadScreen> createState() => _NewLeadScreenState();
@@ -37,9 +39,11 @@ class _NewLeadScreenState extends State<NewLeadScreen>
       body: TabBarView(
         controller: _tabController,
         children: [
-          LeadDetailsScreen(estimate: widget.estimate),
-          LeadDetailsScreen(estimate: widget.estimate),
-          LeadDetailsScreen(estimate: widget.estimate),
+          LeadItemsScreen(items: widget.items),
+          LeadsFloorInfoScreen(
+            estimate: widget.estimate,
+          ),
+          LeadItemsScreen(items: widget.items),
         ],
       ),
     );

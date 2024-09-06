@@ -1,4 +1,5 @@
 
+import 'package:boxigo_app/utils/constants.dart';
 import 'package:boxigo_app/views/leads/leads_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -56,7 +57,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.deepOrange,
+        selectedItemColor: kBaseColor,
         onTap: _onItemTapped,
       ),
     );

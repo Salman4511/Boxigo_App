@@ -109,3 +109,8 @@ const kListViewHeight120 = 120.0;
 // SizedBoxes
 
 const kSizedBoxHeight10 = SizedBox(height: 10);
+const kSizedBoxHeight30 = SizedBox(height: 30);
+
+// Colors
+
+const kBaseColor = Colors.deepOrange;

@@ -11,7 +11,8 @@ class LeadScreen extends StatefulWidget {
   State<LeadScreen> createState() => _LeadScreenState();
 }
 
-class _LeadScreenState extends State<LeadScreen> with SingleTickerProviderStateMixin{
+class _LeadScreenState extends State<LeadScreen>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -22,9 +23,10 @@ class _LeadScreenState extends State<LeadScreen> with SingleTickerProviderStateM
         // ignore: use_build_context_synchronously
         () => Provider.of<LeadController>(context, listen: false).fetchData());
   }
+
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
+    return Scaffold(
       appBar: CustomAppBar(
         tabController: _tabController,
         title: 'Leads',

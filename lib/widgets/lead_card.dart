@@ -65,7 +65,7 @@ class LeadCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Icon(Icons.arrow_downward,
-                            color: Colors.deepOrange),
+                            color: kBaseColor),
                         buildIconText(Icons.home, estimate.propertySize!),
                         buildIconText(
                             Icons.inventory, '${estimate.totalItems} items'),
@@ -98,7 +98,7 @@ class LeadCard extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(builder: (context) {
                                   return NewLeadScreen(
-                                    estimate: estimate.items!,
+                                    items: estimate.items!, estimate: estimate,
                                   );
                                 }),
                               );
@@ -138,7 +138,7 @@ class LeadCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Icon(icon, size: 22, color: Colors.deepOrange),
+        Icon(icon, size: 22, color: kBaseColor),
         Text(text, style: kIconTextStyle),
       ],
     );
